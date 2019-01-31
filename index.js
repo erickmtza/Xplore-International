@@ -1,3 +1,15 @@
+function displayCountryData(responseJson) {
+
+    $('#results').removeClass('hidden');
+
+    $('#results-list').append(
+        `
+        <img src="${responseJson[0].flag}" alt="${responseJson[0].name}">
+        <h2>${responseJson[0].name}, ${responseJson[0].subregion}</h2>
+        `
+    )
+}
+
 function countryData(country) {
 
     const url = `https://restcountries.eu/rest/v2/name/${country}`;
@@ -9,7 +21,7 @@ function countryData(country) {
         }
         throw new Error(response.statusText);
     })
-    .then(responseJson => console.log(responseJson))
+    .then(responseJson => displayCountryData(responseJson))
     .catch(error => {
         $('#results-list').empty();
         console.log(error);
