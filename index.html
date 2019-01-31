@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel-Go</title>
+    <meta name="description" content="Travel abroad with confidence. Reinforce your destination decision.">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Xplore</h1>
+    </header>
+
+    <div class="container">
+        <h2>Travel abroad with confidence.</h2>
+
+        <form id="js-form">
+            
+            <label for="country-destination">Where are you headed?</label>
+            <input type="text" name="destination" id="country-destination" placeholder="Italy" required>
+
+            <input type="submit" value="Xplore">
+
+        </form>
+
+        
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <p id="js-error-message" class="error-message"></p>
+          <ul id="results-list">
+          </ul>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
