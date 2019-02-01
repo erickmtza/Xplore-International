@@ -1,10 +1,11 @@
 function displayCountryData(responseJson) {
 
+    $('#result-data').empty();
     $('#results').removeClass('hidden');
 
-    $('#results-list').append(
+    $('#result-data').append(
         `
-        <img src="${responseJson[0].flag}" alt="${responseJson[0].name}">
+        <img class="country-flag" src="${responseJson[0].flag}" alt="${responseJson[0].name}">
         <h2>${responseJson[0].name}, ${responseJson[0].subregion}</h2>
         `
     )
@@ -23,7 +24,7 @@ function countryData(country) {
     })
     .then(responseJson => displayCountryData(responseJson))
     .catch(error => {
-        $('#results-list').empty();
+        $('#result-data').empty();
         console.log(error);
         $('#js-error-message').text(`Something went wrong: ${error.message}`);
     })

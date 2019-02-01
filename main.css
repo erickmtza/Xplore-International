@@ -6,3 +6,8 @@
 .hidden {
     display: none;
 }
+
+.country-flag {
+    max-width: 100%;
+    height: auto;
+}
