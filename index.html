@@ -14,7 +14,7 @@
         <h1>Xplore</h1>
     </header>
 
-    <div class="container">
+    <main class="container">
         <h2>Travel abroad with confidence.</h2>
 
         <form id="js-form">
@@ -28,11 +28,16 @@
 
         
         <section id="results" class="hidden">
-          <p id="js-error-message" class="error-message"></p>
-          <div id="result-data">
-          </div>
+            <p id="js-error-message" class="error-message"></p>
+            <div id="result-data">
+            </div>
+            <form class="country-options hidden">
+                <fieldset class="country-opt-dis">
+                    <legend>Country matches:</legend>
+                </fieldset>
+            </form>
         </section>
-    </div>
+    </main>
 
     <script src="index.js"></script>
 </body>
