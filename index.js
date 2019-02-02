@@ -23,10 +23,10 @@ function displayCountryData(responseJson) {
     $('#result-data').empty();
     $('#results').removeClass('hidden');
     $('#js-error-message').empty();
-    
+    $('.video-data').empty();
 
     if ( responseJson.length > 1 ) {
-        console.log(responseJson);
+        $('.country-options').find('label, input').remove();
         $('.country-options').removeClass('hidden');
         
         for (let i = 0; i < responseJson.length; i++) {
