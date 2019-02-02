@@ -4,6 +4,7 @@ function matchedCountries(responseJson) {
     $('.country-opt-dis').on('click', 'input', function() {
         const chosenCountry = $(this).val();
         $('.country-options').addClass('hidden');
+        $('#result-data').empty();
 
         const countryIndex = $(this).attr('id');
 
@@ -60,7 +61,7 @@ function countryData(country) {
     })
     .then(responseJson => {
         if (responseJson.length == 1 ) {
-            getYouTubeVideos(country);
+            getYouTubeVideos(responseJson[0].name);
         }
         displayCountryData(responseJson)})
     .catch(error => {
