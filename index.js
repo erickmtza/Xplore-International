@@ -1,11 +1,19 @@
 'use strict';
 
-function matchedCountries() {
+function matchedCountries(responseJson) {
     $('.country-opt-dis').on('click', 'input', function() {
         const chosenCountry = $(this).val();
         $('.country-options').addClass('hidden');
-        
-        countryData(chosenCountry);
+
+        const countryIndex = $(this).attr('id');
+
+        $('#result-data').append(
+            `
+            <img class="country-flag" src="${responseJson[countryIndex].flag}" alt="${responseJson[countryIndex].name}">
+            <h2>${responseJson[countryIndex].name}, ${responseJson[countryIndex].subregion}</h2>
+            `
+        );
+        getYouTubeVideos(chosenCountry);
     })
 }
 
@@ -22,12 +30,15 @@ function displayCountryData(responseJson) {
         
         for (let i = 0; i < responseJson.length; i++) {
             $('.country-opt-dis').append(
-                `<label for="country_${i}">${responseJson[i].name}</label>
+                `<label for="${i}">${responseJson[i].name}</label>
 
-                <input type="radio" name="option" id="country_${i}" value="${responseJson[i].name}" required>`
+                <input type="radio" name="option" id="${i}" value="${responseJson[i].name}" required>`
             )
         }
+        matchedCountries(responseJson);
+
     } else {
+        console.log(responseJson);
         $('#result-data').append(
         `
         <img class="country-flag" src="${responseJson[0].flag}" alt="${responseJson[0].name}">
@@ -47,7 +58,11 @@ function countryData(country) {
         }
         throw new Error(response.statusText);
     })
-    .then(responseJson => displayCountryData(responseJson))
+    .then(responseJson => {
+        if (responseJson.length == 1 ) {
+            getYouTubeVideos(country);
+        }
+        displayCountryData(responseJson)})
     .catch(error => {
         $('#result-data').empty();
         console.log(error);
@@ -62,6 +77,5 @@ $(function searchFetch() {
         const country = $('#country-destination').val();
 
         countryData(country);
-        matchedCountries();
     })
 })
