@@ -24,6 +24,7 @@ function matchedCountries(responseJson) {
 function displayCountryData(responseJson) {
 
     $('#result-data').empty();
+    $('.currency').empty();
     $('#results').removeClass('hidden');
     $('#js-error-message').empty();
     $('.video-data').empty();
@@ -70,8 +71,10 @@ function countryData(country) {
         displayCountryData(responseJson)})
     .catch(error => {
         $('#result-data').empty();
+        $('.currency').empty();
+        $('#results').removeClass('hidden');
         console.log(error);
-        $('#js-error-message').text(`Something went wrong: ${error.message}`);
+        $('#js-error-message').text(`No result(s) for '${country}`);
     })
 }
 
