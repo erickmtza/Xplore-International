@@ -11,3 +11,9 @@
     max-width: 100%;
     height: auto;
 }
+
+@media screen and (min-width: 450px ) {
+    .country-flag {
+        width: 450px;
+    }
+}
