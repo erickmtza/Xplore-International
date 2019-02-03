@@ -26,7 +26,7 @@ function displayResults(responseJson) {
 function getYouTubeVideos(query, maxResults = 4) {
   const params = {
     key: apiKey,
-    q: `${query} places to visit`,
+    q: `${query} travel guide`,
     part: 'snippet',
     maxResults,
     type: 'video'
