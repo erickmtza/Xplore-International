@@ -15,6 +15,9 @@ function matchedCountries(responseJson) {
             `
         );
         getYouTubeVideos(chosenCountry);
+
+        const currencyCode = responseJson[countryIndex].currencies[0].code;
+        currencyConversion(currencyCode);
     })
 }
 
@@ -62,6 +65,7 @@ function countryData(country) {
     .then(responseJson => {
         if (responseJson.length == 1 ) {
             getYouTubeVideos(responseJson[0].name);
+            currencyConversion(responseJson[0].currencies[0].code);
         }
         displayCountryData(responseJson)})
     .catch(error => {
