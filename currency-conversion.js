@@ -3,7 +3,7 @@
 function conversionResults(responseJson, country) {
     $('.currency').empty();
 
-    const exchangeRate = Object.values(responseJson.quotes)[0];
+    const exchangeRate = Object.values(responseJson.rates)[0];
     console.log(responseJson);
   
     $('.currency').append(
@@ -16,8 +16,7 @@ function conversionResults(responseJson, country) {
 function currencyConversion(country) {
     console.log(country);
 
-    // Requires Paid Subscription to use HTTPS.. :(
-    const url = `http://apilayer.net/api/live?access_key=ba33f3bfea3aadfdc80aaa5aabf5bc43&currencies=${country}`;
+    const url = `https://api.exchangeratesapi.io/latest?base=USD&symbols=${country}`;
 
     fetch(url)
     .then(response => {
