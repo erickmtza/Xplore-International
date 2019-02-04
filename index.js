@@ -72,6 +72,7 @@ function countryData(country) {
     .catch(error => {
         $('#result-data').empty();
         $('.currency').empty();
+        $('.video-data').empty();
         $('#results').removeClass('hidden');
         console.log(error);
         $('#js-error-message').text(`No result(s) for '${country}`);
