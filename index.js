@@ -76,7 +76,7 @@ function countryData(country) {
         $('.country-options').empty();
         $('#results').removeClass('hidden');
         console.log(error);
-        $('#js-error-message').text(`No result(s) for '${country}`);
+        $('#js-error-message').text(`No result(s) for '${country}'`);
     })
 }
 
