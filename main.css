@@ -3,12 +3,22 @@
     padding: 0;
 }
 
+main {
+    background-image: url(Img/Waterfall.gif);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
 .hidden {
     display: none;
 }
 
 header {
     background: black;
+    position: fixed;
+    width: 100%;
 }
 
 h1 {
@@ -19,11 +29,11 @@ h1 {
 }
 
 #js-form {
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
     position: absolute;
     margin: auto;
     top: 0;
