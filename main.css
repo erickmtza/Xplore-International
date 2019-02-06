@@ -7,10 +7,23 @@
     display: none;
 }
 
+header {
+    background: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    padding: 5px;
+}
+
 .country-flag {
     max-width: 100%;
     height: auto;
 }
+
+
 
 @media screen and (min-width: 450px ) {
     .country-flag {
