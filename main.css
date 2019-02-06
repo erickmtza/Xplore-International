@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 main {
     background-image: url(Img/Waterfall.gif);
-    background-position: center; /* Center the image */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -28,6 +29,23 @@ h1 {
     padding: 5px;
 }
 
+h2 {
+    display: block;
+    position: relative;
+    top: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    );
+    color: white;
+    font-size: 20px;
+    font-family: 'Charm', cursive;
+    text-align: center;
+}
+
 #js-form {
     background-color: transparent;
     display: flex;
@@ -42,11 +60,45 @@ h1 {
     left: 0;
 }
 
+#js-form label {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#js-form input {
+    border: 1px solid rgb(37, 175, 185);
+}
+
 #country-destination {
-    padding: 5px;
+    color: white;
+    padding: 10px;
     border-radius: 26px;
-    border: 1px solid black;
+    width: 188px;
     text-align: center;
+    background: 
+    linear-gradient(
+      rgba(240, 234, 234, 0.3),
+      rgba(240, 234, 234, 0.3)
+    );
+}
+
+#submit-search {
+    font-family: 'Lobster', cursive;
+    margin-top: 15px;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    background: 
+    linear-gradient(
+      rgba(240, 234, 234, 0.3),
+      rgba(240, 234, 234, 0.3)
+    );
+}
+
+#submit-search:hover {
+    cursor: pointer;
 }
 
 .country-flag {
