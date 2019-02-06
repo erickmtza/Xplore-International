@@ -35,9 +35,10 @@ function displayCountryData(responseJson) {
         
         for (let i = 0; i < responseJson.length; i++) {
             $('.country-opt-dis').append(
-                `<label for="${i}">${responseJson[i].name}</label>
-
-                <input type="radio" name="option" id="${i}" value="${responseJson[i].name}" required>`
+                `<li>
+                <label for="${i}">${responseJson[i].name}</label>
+                <input type="radio" name="option" id="${i}" value="${responseJson[i].name}" required>
+                </li>`
             )
         }
         matchedCountries(responseJson);
