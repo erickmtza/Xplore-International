@@ -196,6 +196,11 @@ h3 {
     ); 
 }
 
+#js-error-message {
+    padding-top: 70px;
+    text-align: center;
+}
+
 .rate-comparison {
     margin-top: 10px;
 }
