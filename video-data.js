@@ -16,7 +16,7 @@ function displayResults(responseJson) {
 
     $('.video-data').append(
       `<li>
-        <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+        <img src="${responseJson.items[i].snippet.thumbnails.default.url}" alt="${responseJson.items[i].snippet.title}">
         <a href="https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}" target="_blank">${responseJson.items[i].snippet.title}</a>
         <p>${responseJson.items[i].snippet.description}</p>
       </li>`
