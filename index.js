@@ -97,7 +97,7 @@ $(function searchFeature() {
 
         </form>
         `
-    )
+    );
 })
 
 $(function searchFetch() {
