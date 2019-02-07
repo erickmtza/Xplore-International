@@ -175,6 +175,21 @@ h3 {
     margin-top: 10px;
 }
 
+#myModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#modal-view {
+    font-size: 60px;
+}
+
+.close-modal {
+    color: white;
+}
+
 @media screen and (min-width: 450px ) {
     .country-flag {
         width: 450px;

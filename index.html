@@ -24,9 +24,30 @@
     <main class="container">
         <section id="intro-search">
             <h2>Travel abroad with confidence</h2>
+            <form id="js-form" class="main-front-search">
+                
+                <label for="country-destination">Where are you headed?</label>
+                <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
+
+                <input title="Xplore" id="submit-search" type="submit" value="&#62X&#60">
+
+            </form>
         </section>
 
-        
+        <section id="myModal" class="hidden">
+            <div id="modal-view">
+                <span class="close-modal">×</span>
+                <form id="js-form">
+                
+                    <label for="country-destination">Where are you headed?</label>
+                    <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
+    
+                    <input title="Xplore" id="submit-search" class="modal-search" type="submit" value="&#62X&#60">
+    
+                </form>
+            </div>
+        </section>
+
         <section id="results" class="hidden">
             <p id="js-error-message" class="error-message"></p>
             <div id="result-data">

@@ -23,9 +23,11 @@ function matchedCountries(responseJson) {
 }
 
 function displayCountryData(responseJson) {
-    $('#js-form').remove();
+    $('.main-front-search').remove();
     $('#intro-search h2').empty().css('padding-bottom', '0');
     $('.touch-search').removeClass('hidden');
+    $('.country-opt-dis').empty();
+    $('.country-options').addClass('hidden');
     $('#result-data').empty();
     $('.currency').empty();
     $('#results').removeClass('hidden');
@@ -85,20 +87,17 @@ function countryData(country) {
     })
 }
 
-$(function searchFeature() {
-    $('#intro-search').append(
-        `
-        <form id="js-form">
-            
-            <label for="country-destination">Where are you headed?</label>
-            <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
+function openModal() {
+    $('.touch-search').on('click', () => {
+        $('#myModal').removeClass('hidden');
+    })
+}
 
-            <input title="Xplore" id="submit-search" type="submit" value="&#62X&#60">
-
-        </form>
-        `
-    );
-})
+function closeModal() {
+    $('.modal-search').on('click', () => {
+        $('#myModal').addClass('hidden');
+    })
+}
 
 $(function searchFetch() {
     $('form').submit( event => {
@@ -107,5 +106,7 @@ $(function searchFetch() {
         const country = $('#country-destination').val();
 
         countryData(country);
+        openModal();
+        closeModal();
     })
 })
