@@ -136,7 +136,6 @@ h2 {
 }
 
 h3 {
-    position: relative;
     margin-top: 50px;
     padding: 5px;
     background: 
@@ -151,8 +150,6 @@ h3 {
 }
 
 .country-flag {
-    display: block;
-    position: relative;
     max-width: 100%;
     height: auto;
 }
