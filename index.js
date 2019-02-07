@@ -27,10 +27,10 @@ function displayCountryData(responseJson) {
     $('#intro-search h2').empty().css('padding-bottom', '0');
     $('.touch-search').removeClass('hidden');
     $('.country-opt-dis').empty();
-    $('.country-options').addClass('hidden');
     $('#result-data').empty();
     $('.currency').empty();
     $('#results').removeClass('hidden');
+    $('.country-options').addClass('hidden');
     $('#js-error-message').empty();
     $('.video-data').empty();
     console.log(responseJson);
@@ -80,7 +80,7 @@ function countryData(country) {
         $('#result-data').empty();
         $('.currency').empty();
         $('.video-data').empty();
-        $('.country-options').empty();
+        $('.country-options').addClass('hidden');
         $('#results').removeClass('hidden');
         console.log(error);
         $('#js-error-message').text(`No result(s) for '${country}'`);

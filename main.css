@@ -135,6 +135,33 @@ h2 {
     cursor: pointer;
 }
 
+.country-options {
+    padding-top: 30px;
+}
+
+fieldset {
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+.country-opt-dis {
+    list-style: none;
+}
+
+.country-opt-dis li {
+    margin-top: 15px;
+}
+
+.country-opt-dis li label:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.country-opt-dis input[type="radio"] {
+    display: none;
+}
+
 h3 {
     margin-top: 50px;
     padding: 5px;
