@@ -23,6 +23,9 @@ function matchedCountries(responseJson) {
 }
 
 function displayCountryData(responseJson) {
+    $('#js-form').remove();
+    $('#intro-search h2').empty().css('padding-bottom', '0');
+    $('.touch-search').removeClass('hidden');
     $('#result-data').empty();
     $('.currency').empty();
     $('#results').removeClass('hidden');
@@ -81,6 +84,21 @@ function countryData(country) {
         $('#js-error-message').text(`No result(s) for '${country}'`);
     })
 }
+
+$(function searchFeature() {
+    $('#intro-search').append(
+        `
+        <form id="js-form">
+            
+            <label for="country-destination">Where are you headed?</label>
+            <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
+
+            <input title="Xplore" id="submit-search" type="submit" value="&#62X&#60">
+
+        </form>
+        `
+    )
+})
 
 $(function searchFetch() {
     $('form').submit( event => {
