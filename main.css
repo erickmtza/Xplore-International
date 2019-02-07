@@ -4,12 +4,12 @@
     font-family: 'Fjalla One', sans-serif;
 }
 
-main {
+body {
     background-image: url(Img/Waterfall.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
 }
 
 .hidden {
@@ -83,6 +83,10 @@ h2 {
     );
 }
 
+::placeholder {
+    color: black;
+}
+
 #submit-search {
     font-family: 'Lobster', cursive;
     margin-top: 15px;
@@ -101,12 +105,45 @@ h2 {
     cursor: pointer;
 }
 
+h3 {
+    position: relative;
+    margin-top: 9.9px;
+    padding: 5px;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    );
+    color: white;
+    font-size: 20px;
+    font-family: 'Charm', cursive;
+    text-align: center;
+}
+
 .country-flag {
+    display: block;
+    position: relative;
     max-width: 100%;
     height: auto;
 }
 
+.currency {
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+    ); 
+}
 
+.rate-comparison {
+    margin-top: 10px;
+}
 
 @media screen and (min-width: 450px ) {
     .country-flag {

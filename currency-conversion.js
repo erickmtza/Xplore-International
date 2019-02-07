@@ -5,12 +5,17 @@ function conversionResults(responseJson, country) {
 
     const exchangeRate = Object.values(responseJson.rates)[0];
     console.log(responseJson);
-  
     $('.currency').append(
     `
-        <p>1 USD = ${exchangeRate} ${country}</p>
+    <p>U.S. dollar Exchange Rate:</p>
+    <p class="rate-comparison">1 USD = <span class="rate-color">${exchangeRate}</span> ${country}</p>
     `
     );
+    if (exchangeRate < 1 ) {
+        $('.rate-color').css("color", 'rgb(255, 41, 41)');
+    } else {
+        $('.rate-color').css("color", 'rgb(40, 240, 40)');
+    }
   };
 
 function currencyConversion(country) {
@@ -29,6 +34,6 @@ function currencyConversion(country) {
     .catch(error => {
         $('.currency').empty();
         console.log(error);
-        $('.currency').text(`Unable to find currency exchange to USD.`);
+        $('.currency').text(`Unable to find the currency exchange rate to USD.`);
     })
 }

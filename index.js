@@ -10,11 +10,12 @@ function matchedCountries(responseJson) {
 
         $('#result-data').append(
             `
+            <h3>${responseJson[countryIndex].name}, ${responseJson[countryIndex].subregion}</h3>
             <img class="country-flag" src="${responseJson[countryIndex].flag}" alt="${responseJson[countryIndex].name}">
-            <h2>${responseJson[countryIndex].name}, ${responseJson[countryIndex].subregion}</h2>
+            
             `
         );
-        getYouTubeVideos(chosenCountry);
+        //getYouTubeVideos(chosenCountry);
 
         const currencyCode = responseJson[countryIndex].currencies[0].code;
         currencyConversion(currencyCode);
@@ -22,15 +23,15 @@ function matchedCountries(responseJson) {
 }
 
 function displayCountryData(responseJson) {
-
     $('#result-data').empty();
     $('.currency').empty();
     $('#results').removeClass('hidden');
     $('#js-error-message').empty();
     $('.video-data').empty();
+    console.log(responseJson);
 
     if ( responseJson.length > 1 ) {
-        $('.country-options').find('label, input').remove();
+        $('.country-options').find('li').remove();
         $('.country-options').removeClass('hidden');
         
         for (let i = 0; i < responseJson.length; i++) {
@@ -47,8 +48,8 @@ function displayCountryData(responseJson) {
         console.log(responseJson);
         $('#result-data').append(
         `
+        <h3>${responseJson[0].name}, ${responseJson[0].subregion}</h3>
         <img class="country-flag" src="${responseJson[0].flag}" alt="${responseJson[0].name}">
-        <h2>${responseJson[0].name}, ${responseJson[0].subregion}</h2>
         `
     )}
 }
@@ -66,7 +67,7 @@ function countryData(country) {
     })
     .then(responseJson => {
         if (responseJson.length == 1 ) {
-            getYouTubeVideos(responseJson[0].name);
+            //getYouTubeVideos(responseJson[0].name);
             currencyConversion(responseJson[0].currencies[0].code);
         }
         displayCountryData(responseJson)})
