@@ -16,10 +16,41 @@ body {
     display: none;
 }
 
+nav {
+    position: absolute;
+    right: 0;
+    align-self: center;
+}
+
 header {
+    display: flex;
     background: black;
     position: fixed;
     width: 100%;
+}
+
+.nav-opt {
+    display: flex;
+    list-style: none;
+}
+
+.nav-opt li {
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.nav-opt li a {
+    text-decoration: none;
+    color: rgb(37, 175, 185);
+}
+
+.nav-search {
+    max-width: 18px;
+    height: auto;
+}
+
+.touch-search:hover {
+    cursor: pointer;
 }
 
 h1 {
@@ -52,12 +83,11 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #js-form label {
