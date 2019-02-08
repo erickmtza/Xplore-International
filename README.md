@@ -26,6 +26,9 @@ Search feature:
 * HTML
 * CSS
 * JavaScript/jQuery
+* RESTful API
+* YouTube Data API v3
+* exchangeratesAPI.io
 
 ## Features
 
