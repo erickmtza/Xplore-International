@@ -237,6 +237,16 @@ h3 {
     cursor: pointer;
 }
 
+@media screen and (min-width: 421px ) {
+    .country-flag {
+        width: 300px;
+        padding: 0px 10px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (min-width: 815px ) {
     .country-flag {
         width: 200px;
