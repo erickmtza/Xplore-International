@@ -229,8 +229,27 @@ h3 {
     color: white;
 }
 
-@media screen and (min-width: 450px ) {
+@media screen and (min-width: 815px ) {
     .country-flag {
         width: 300px;
     }
+
+    #js-form label {
+        font-size: 60px;
+    }
+
+    #country-destination {
+        padding: 14px;
+        font-size: 20px;
+        width: 300px;
+    }
+
+    #submit-search {
+        font-family: 'Lobster', cursive;
+        margin-top: 15px;
+        color: white;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
 }
