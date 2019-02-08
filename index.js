@@ -96,7 +96,10 @@ function openModal() {
 function closeModal() {
     $('.modal-search').on('click', () => {
         $('#myModal').addClass('hidden');
-    })
+    });
+    $('.close-modal').on('click', () => {
+        $('#myModal').addClass('hidden');
+    });
 }
 
 $(function searchFetch() {

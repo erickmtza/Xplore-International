@@ -229,6 +229,12 @@ h3 {
 
 .close-modal {
     color: white;
+    float: right;
+    margin-right: 15px;
+}
+
+.close-modal:hover {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 815px ) {
