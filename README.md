@@ -3,20 +3,20 @@ Search for a country and see links to travel guides and the exchange rate for th
 
 ## Demo
 
-- [Live Demo](https://erickmtza.github.io/Xplore-Capstone-Project-1/)## Motivation
+- [Live Demo](https://erickmtza.github.io/Xplore-Capstone-Project-1/)
 
 ## Screenshots
 Landing Page:
 
-![login screen](/img/first-look.PNG)
+![login screen](/Img/first-look.PNG)
 
 About:
 
-![mobile](/img/mobile-view.PNG)
+![mobile](/Img/mobile-view.PNG)
 
 Library:
 
-![Search](/img/search-feature.PNG)
+![Search](/Img/search-feature.PNG)
 
 ## Built With
 
