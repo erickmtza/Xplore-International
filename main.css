@@ -205,6 +205,15 @@ h3 {
     margin-top: 10px;
 }
 
+.video-data li {
+    margin-bottom: 15px;
+    background: 
+    linear-gradient(
+      rgba(240, 234, 234, 0.5),
+      rgba(240, 234, 234, 0.3)
+    );
+}
+
 #myModal {
     position: fixed;
     width: 100%;
