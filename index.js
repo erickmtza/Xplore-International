@@ -1,5 +1,9 @@
 'use strict';
 
+/** 
+ * @description This functions will pick the specific country from the array based on the index
+ * @param {object} responseJson Array with matched countries.
+*/
 function matchedCountries(responseJson) {
     $('.country-opt-dis').on('click', 'input', function() {
         const chosenCountry = $(this).val();
@@ -22,7 +26,7 @@ function matchedCountries(responseJson) {
     })
 }
 
-function displayCountryData(responseJson) {
+function clearView() {
     $('.main-front-search').remove();
     $('#intro-search h2').empty().css('padding-bottom', '0');
     $('.touch-search').removeClass('hidden');
@@ -33,12 +37,23 @@ function displayCountryData(responseJson) {
     $('.country-options').addClass('hidden');
     $('#js-error-message').empty();
     $('.video-data').empty();
+}
+
+/** 
+ * @description Displaying the country data from the response
+ * @param {object} responseJson Array with matched countries.
+*/
+function displayCountryData(responseJson) {
+    //Wipe off the previous views
+    clearView();
     console.log(responseJson);
 
+    // if several matches are made
     if ( responseJson.length > 1 ) {
         $('.country-options').find('li').remove();
         $('.country-options').removeClass('hidden');
         
+        // Display them all
         for (let i = 0; i < responseJson.length; i++) {
             $('.country-opt-dis').append(
                 `<li>
