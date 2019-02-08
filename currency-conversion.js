@@ -16,7 +16,7 @@ function conversionResults(responseJson, country) {
     } else {
         $('.rate-color').css("color", 'rgb(40, 240, 40)');
     }
-  };
+}
 
 function currencyConversion(country) {
     console.log(country);

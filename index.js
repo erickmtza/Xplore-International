@@ -90,7 +90,7 @@ function countryData(country) {
 function openModal() {
     $('.touch-search').on('click', () => {
         $('#myModal').removeClass('hidden');
-    })
+    });
 }
 
 function closeModal() {

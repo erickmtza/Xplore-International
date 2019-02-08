@@ -3,7 +3,7 @@
 # Xplore International
 Search for a country and see links to travel guides and the exchange rate for the USD in hopes to reinforce a destination decision.
 
-## Demo
+## Demo Link
 
 - [Live Demo](https://erickmtza.github.io/Xplore-Capstone-Project-1/)
 

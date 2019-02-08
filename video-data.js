@@ -21,7 +21,7 @@ function displayResults(responseJson) {
         <p>${responseJson.items[i].snippet.description}</p>
       </li>`
     )};
-};
+}
 
 function getYouTubeVideos(query, maxResults = 4) {
   const params = {
