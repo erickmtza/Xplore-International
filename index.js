@@ -50,7 +50,6 @@ function displayCountryData(responseJson) {
         matchedCountries(responseJson);
 
     } else {
-        console.log(responseJson);
         $('#result-data').append(
         `
         <h3>${responseJson[0].name}, ${responseJson[0].subregion}</h3>
