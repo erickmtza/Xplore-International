@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Charm|Fjalla+One|Lobster" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Xplore</h1>
         <nav>
             <ul class="nav-opt">
@@ -21,30 +21,30 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main role="main" class="container">
         <section id="intro-search">
             <h2>Travel abroad with confidence</h2>
-            <form id="js-form" class="main-front-search">
+            <form role="search" id="js-form" class="main-front-search">
                 <label for="country-destination">Where are you headed?</label>
                 <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
 
-                <input title="Xplore" id="submit-search" type="submit" value="&#62X&#60">
+                <input role="button" title="Xplore" id="submit-search" type="submit" value="&#62X&#60">
             </form>
         </section>
 
         <section id="myModal" class="hidden">
             <div id="modal-view">
-                <span class="close-modal">×</span>
-                <form id="js-form">
+                <span role="button" class="close-modal">×</span>
+                <form role="search" id="js-form">
                     <label for="country-destination">Where are you headed?</label>
                     <input type="text" name="destination" id="country-destination" placeholder="E.g. Italy" required>
     
-                    <input title="Xplore" id="submit-search" class="modal-search" type="submit" value="&#62X&#60">
+                    <input role="button" title="Xplore" id="submit-search" class="modal-search" type="submit" value="&#62X&#60">
                 </form>
             </div>
         </section>
 
-        <section id="results" class="hidden">
+        <section role="contentinfo" id="results" class="hidden">
             
             <div id="result-data"></div>
             <div class="currency"></div>
