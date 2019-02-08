@@ -10,11 +10,11 @@ Landing Page:
 
 ![login screen](/Img/first-look.PNG)
 
-About:
+Mobile:
 
 ![mobile](/Img/mobile-view.PNG)
 
-Library:
+Search feature:
 
 ![Search](/Img/search-feature.PNG)
 
