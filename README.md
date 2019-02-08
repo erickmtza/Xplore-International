@@ -5,7 +5,7 @@ Search for a country and see links to travel guides and the exchange rate for th
 
 ## Demo Link
 
-- [Live Demo](https://erickmtza.github.io/Xplore-Capstone-Project-1/)
+- [Live Demo](https://github.com/erickmtza/Xplore-International.git)
 
 ## Screenshots
 Landing Page:
