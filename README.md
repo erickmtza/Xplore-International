@@ -8,15 +8,15 @@ Search for a country and see links to travel guides and the exchange rate for th
 ## Screenshots
 Landing Page:
 
-![login screen](img/first-look.PNG)
+![login screen](/img/first-look.PNG)
 
 About:
 
-![mobile](img/mobile-view.PNG)
+![mobile](/img/mobile-view.PNG)
 
 Library:
 
-![Search](img/search-feature.PNG)
+![Search](/img/search-feature.PNG)
 
 ## Built With
 
@@ -31,10 +31,3 @@ Library:
 * Find the exchange rate if available for the USD
 * Find links to travel guide videos from YouTube
 
-
-## Authors
-
-* **Sonja Duric** - ** - Database design/Back-End development
-* **Jonathan Fitzgibbon** - ** - Back-End development/testing
-* **Tanner Gill** - ** - Front-End development/testing, styling
-* **Patrice White** - ** - Front-End development/testing, styling
