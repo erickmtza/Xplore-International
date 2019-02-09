@@ -4,6 +4,23 @@
     font-family: 'Fjalla One', sans-serif;
 }
 
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(Img/Waterfall.gif) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  /*
 body {
     background-image: url(Img/Waterfall.gif);
     background-position: center;
@@ -11,6 +28,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+*/
 
 .hidden {
     display: none;
